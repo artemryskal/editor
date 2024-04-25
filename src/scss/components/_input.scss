@@ -1,0 +1,33 @@
+.v-input {
+  grid-template-rows: 1fr;
+
+  .v-field__prepend-inner {
+    padding: 0 !important;
+    padding-left: 20px !important;
+    align-items: center !important;
+  }
+
+  input {
+    padding: 0 10px !important;
+    height: 100%;
+    font-size: 1rem;
+  }
+
+  .v-field__outline {
+    &::before {
+      border-color: rgb(var(--v-theme-border));
+      opacity: 1;
+    }
+
+    &::after {
+      border-color: rgb(var(--v-theme-primary));
+      border-width: 0 0 1px;
+    }
+  }
+
+  .v-field__prepend-inner > .v-icon,
+  .v-field__append-inner > .v-icon,
+  .v-field__clearable > .v-icon {
+    opacity: 1;
+  }
+}

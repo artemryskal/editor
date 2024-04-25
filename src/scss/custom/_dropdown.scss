@@ -1,0 +1,17 @@
+.dropdown {
+  background-color: rgb(var(--v-theme-popup)) !important;
+  border-radius: 5px;
+  box-shadow: none !important;
+
+  &__item {
+    width: 100%;
+    min-height: 0 !important;
+    padding: 5px 20px !important;
+    font-weight: 600;
+
+    &:hover {
+      background-color: rgb(var(--v-theme-primary));
+      cursor: pointer;
+    }
+  }
+}

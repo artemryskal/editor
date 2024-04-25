@@ -9,11 +9,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tiptap/pm": "^2.3.0",
+    "@tiptap/starter-kit": "^2.3.0",
+    "@tiptap/vue-3": "^2.3.0",
     "vue": "^3.4.21"
   },
   "devDependencies": {
+    "@tiptap/core": "^2.3.0",
+    "@tiptap/extension-bold": "^2.3.0",
+    "@tiptap/extension-document": "^2.3.0",
+    "@tiptap/extension-italic": "^2.3.0",
+    "@tiptap/extension-paragraph": "^2.3.0",
+    "@tiptap/extension-underline": "^2.3.0",
     "@vitejs/plugin-vue": "^5.0.4",
+    "pinia": "^2.1.7",
     "prettier": "^3.2.5",
+    "sass": "^1.75.0",
     "single-spa-vue": "^3.0.0",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-vue-components": "^0.26.0",

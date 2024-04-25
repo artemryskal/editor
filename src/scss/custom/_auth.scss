@@ -1,0 +1,27 @@
+.auth {
+  display: flex;
+  justify-content: flex-end;
+  background-image: url('@/assets/images/login-image.png');
+  background-repeat: no-repeat;
+  height: 100lvh;
+  background-size: contain;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(var(--v-theme-background));
+    width: 44.2%;
+    padding: 5rem 10.8rem;
+  }
+
+  &__logo {
+    width: 140px !important;
+    height: auto !important;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.12rem;
+  }
+}

@@ -1,0 +1,20 @@
+.docs-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  &__item {
+    margin-bottom: 5px;
+    padding: 5px !important;
+    min-height: auto !important;
+    opacity: 0.8;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .v-list-item__overlay {
+      display: none;
+    }
+  }
+}

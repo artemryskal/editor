@@ -1,13 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
-const EditorView = () => import('@/views/EditorView.vue')
+import MainLayout from '@/layouts/MainLayout.vue'
+import EditorView from '@/views/EditorView.vue'
+import HeaderBase from '@/components/header/HeaderBase.vue'
+import SidebarBase from '@/components/sidebar/SidebarBase.vue'
 
 const routes = [
   {
-    path: '/editor/:id',
-    name: 'editor',
-    component: EditorView
-  }
+    path: '/editor',
+    component: MainLayout,
+    children: [
+      {
+        path: ':id',
+        name: 'editor',
+        components: {
+          default: EditorView,
+          header: HeaderBase,
+          sidebar: SidebarBase,
+        },
+      },
+    ],
+  },
 ]
 
 const router = createRouter({
