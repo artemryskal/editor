@@ -1,5 +1,8 @@
 <template>
-  <editor-content :editor="editor" class="editor" />
+  <div class="editor">
+    <EditorContent :editor="editor" class="editor__place" />
+    <EditorMenu class="editor__btn" />
+  </div>
 </template>
 
 <script setup>
@@ -18,14 +21,32 @@ onMounted(() => {
 .editor {
   display: flex;
   flex-direction: column;
-  background: rgb(var(--v-theme-editor_background));
-  color: rgb(var(--v-theme-editor_text));
-  min-height: calc(100% - 88px);
   max-width: 644px;
   margin: 44px auto;
 
   :deep(.tiptap) {
     outline: none;
+  }
+
+  &__place {
+    display: flex;
+    flex-direction: column;
+    background: rgb(var(--v-theme-editor_background));
+    color: rgb(var(--v-theme-editor_text));
+  }
+
+  &__btn {
+    flex-grow: 1;
+  }
+
+  // Сброс стилей vuetify в редакторе
+  :deep(.tiptap) {
+    font-family: 'Times New Roman', Times, serif;
+
+    b,
+    strong {
+      font-weight: 600;
+    }
   }
 }
 </style>

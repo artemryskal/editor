@@ -4,21 +4,18 @@ import StarterKit from '@tiptap/starter-kit'
 import Bold from '@tiptap/extension-bold'
 import Italic from '@tiptap/extension-italic'
 import Underline from '@tiptap/extension-underline'
+import TextStyle from '@tiptap/extension-text-style'
+import FontFamily from '@tiptap/extension-font-family'
 import { useEditorStore } from '@/stores/editor'
-import doc from '@/mocks/doc.js'
 
-// Плагин для параграфа
+// Схема параграфа
 const Paragraph = TipParagraph.extend({
-  addAttributes() {
-    return {
-      style: {
-        default: null,
-        renderHTML: (attributes) => ({
-          style: attributes.style,
-        }),
-      },
-    }
-  },
+  addAttributes: () => ({
+    style: {
+      default: null,
+      renderHTML: ({ style }) => ({ style }),
+    },
+  }),
 })
 
 // Функция инициализация
@@ -27,8 +24,15 @@ export const initTipTap = () => {
     const editorStore = storeToRefs(useEditorStore())
     editorStore.editor.value = new Editor({
       preserveStyles: true,
-      content: doc,
-      extensions: [Paragraph, Bold, Italic, Underline, StarterKit],
+      extensions: [
+        Paragraph,
+        Bold,
+        Italic,
+        Underline,
+        StarterKit,
+        TextStyle,
+        FontFamily,
+      ],
       onSelectionUpdate(e) {
         // Проверяем выделен ли текст
         const { view, state } = e.editor
