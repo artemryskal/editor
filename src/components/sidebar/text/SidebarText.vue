@@ -13,7 +13,7 @@
       </template>
       <template #text>
         <!-- Семейство шрифтов -->
-        <!--        <SidebarTextFont />-->
+        <SidebarTextFont />
         <!-- Стили шрифта -->
         <SidebarTextStyle />
       </template>
